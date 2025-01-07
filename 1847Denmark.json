@@ -1,0 +1,1922 @@
+{
+  "meta": {
+    "id": "18DK",
+    "slug": "18DK",
+    "type": "bundled"
+  },
+  "info": {
+    "title": "Denmark 1847",
+    "designer": "Nikolaj Lepka",
+    "publisher": "City Hare Studio",
+    "background": "purple",
+    "titleX": 700,
+    "titleSize": 80,
+    "currency": "#kr.",
+    "orientation": "horizontal",
+    "marketTokens": 2
+  },
+  "wip": true,
+  "links": {
+    "bgg": "https://www.boardgamegeek.com/boardgame/18291/unpublished-prototype",
+    "rules": "https://www.dropbox.com/sh/4onmo5d7mrx6ig7/AACmRPhO4cT_khBoWcpc8R57a?dl=0"
+  },
+  "tokens": [
+    "Round"
+  ],
+  "bank": 8000,
+  "players": [
+    {
+      "number": 2,
+      "certLimit": 17,
+      "capital": 600
+    },
+    {
+      "number": 3,
+      "certLimit": 15,
+      "cnkapital": 400
+    },
+    {
+      "number": 4,
+      "certLimit": 12,
+      "capital": 300
+    }
+  ],
+  "tokenTypes": {
+    "minor": [
+      "Free",
+      50
+    ],
+    "default": [
+      "Home",
+      40,
+      60,
+      80,
+      "",
+      "Exchange",
+      ""
+    ]
+  },
+  "shareTypes": {
+    "minor": [],
+    "default": [
+      {
+        "quantity": 1,
+        "label": "President's Certificate",
+        "percent": "20/40",
+        "shares": 2
+      },
+      {
+        "quantity": 3,
+        "percent": "20/10",
+        "shares": 1
+      },
+      {
+        "quantity": 5,
+        "percent": 10,
+        "shares": 1
+      }
+    ]
+  },
+  "companies": [
+    {
+      "name": "Det Sjællandske Jernbaneselskab",
+      "minor": true,
+      "abbrev": "DSJ",
+      "color": "red"
+    },
+    {
+      "name": "Altona-Kiel",
+      "minor": true,
+      "abbrev": "AK",
+      "color": "green"
+    },
+    {
+      "name": "Det Danske Jernbanedriftselskab",
+      "minor": true,
+      "abbrev": "DDJ",
+      "color": "yellow"
+    },
+    {
+      "name": "Fakse Jernbane",
+      "minor": true,
+      "abbrev": "FJ",
+      "color": "blue"
+    },
+    {
+      "name": "Svendborg-Nyborg Bybanen",
+      "minor": true,
+      "abbrev": "SNB",
+      "color": "purple"
+    },
+    {
+      "name": "Frederik VIIs Sydslesvigske Jernbane",
+      "minor": true,
+      "abbrev": "FSJ",
+      "color": "white"
+    }
+  ],
+  "trains": [
+    {
+      "name": "2",
+      "quantity": 12,
+      "price": 70,
+      "color": "yellow",
+      "rust": "4"
+    },
+    {
+      "name": "3",
+      "quantity": 6,
+      "price": 140,
+      "color": "green",
+      "rust": "6"
+    },
+    {
+      "name": "4",
+      "quantity": 4,
+      "price": 250,
+      "color": "green",
+      "rust": "D"
+    },
+    {
+      "name": "5",
+      "quantity": 3,
+      "price": 500,
+      "color": "brown"
+    },
+    {
+      "name": "6",
+      "quantity": 2,
+      "price": 750,
+      "color": "brown"
+    },
+    {
+      "name": "D",
+      "quantity": 6,
+      "price": 1000,
+      "color": "gray",
+      "description": "Cost 800 when trading in a 4T, 5T or 6T",
+      "available": "6",
+      "discount": {
+        "4": 300,
+        "5": 300,
+        "6": 300
+      }
+    },
+    {
+      "name": "5",
+      "quantity": 1,
+      "color": "brown",
+      "description": "Granted By P7"
+    }
+  ],
+  "privates": [],
+  "phases": [
+    {
+      "name": "2",
+      "limit": 4,
+      "tiles": "yellow"
+    },
+    {
+      "name": "3",
+      "limit": 4,
+      "tiles": "green"
+    },
+    {
+      "name": "4",
+      "limit": 3,
+      "tiles": "green"
+    },
+    {
+      "name": "5",
+      "limit": 3,
+      "tiles": "brown"
+    },
+    {
+      "name": "6",
+      "limit": 2,
+      "tiles": "brown"
+    },
+    {
+      "name": "D",
+      "limit": 2,
+      "tiles": "gray"
+    }
+  ],
+  "pools": [
+    {
+      "name": "Market",
+      "notes": [
+        {
+          "color": "orange",
+          "note": "Shares in the market pay dividends to the corporation"
+        },
+        {
+          "color": "brown",
+          "icon": "exclamation",
+          "note": "No more than 50% of a corporation's shares may be in the market at any time"
+        },
+        {
+          "color": "red",
+          "icon": "times",
+          "note": "Shares cannot be sold during the first stock round"
+        }
+      ]
+    }
+  ],
+  "rounds": [
+    {
+      "name": "OR3",
+      "color": "brown"
+    },
+    {
+      "name": "OR2",
+      "color": "green"
+    },
+    {
+      "name": "OR1",
+      "color": "yellow"
+    },
+    {
+      "name": "SR",
+      "color": "gray"
+    }
+  ],
+  "turns": [
+    {
+      "name": "Stock Round",
+      "steps": [
+        "Place or incease bid",
+        "Sell then Buy shares",
+        "Launch a public company",
+        "Auction a minor company"
+      ],
+      "ordered": false
+    },
+    {
+      "name": "Operating Round",
+      "steps": [
+        "Lay or upgrade track",
+        "Purchase a station",
+        "Run trains",
+        "Pay dividends or withhold revenue",
+        "Purchase trains",
+        "Acquire a minor company",
+        "Redeem or Issue Shares"
+      ],
+      "ordered": true,
+      "optional": [
+        "Purchase private companies"
+      ]
+    }
+  ],
+  "stock": {
+    "type": "2D",
+    "par": {
+      "values": [
+        100,
+        90,
+        82,
+        76,
+        71,
+        67
+      ]
+    },
+    "movement": {
+      "up": [
+        "Sold out"
+      ],
+      "down": [
+        "Every share sold"
+      ],
+      "left": [
+        "Withheld revenue"
+      ],
+      "right": [
+        "Paid dividends"
+      ]
+    },
+    "market": [
+      [
+        {
+          "value": 60,
+          "label": 60,
+          "legend": 0,
+          "arrow": "down"
+        },
+        67,
+        71,
+        76,
+        82,
+        90,
+        {
+          "value": 100,
+          "label": 100,
+          "par": true
+        },
+        112,
+        126,
+        142,
+        160,
+        180,
+        200,
+        225,
+        250,
+        275,
+        300,
+        325,
+        350
+      ],
+      [
+        {
+          "value": 53,
+          "label": 53,
+          "legend": 0,
+          "arrow": "down"
+        },
+        {
+          "value": 60,
+          "label": 60,
+          "legend": 0
+        },
+        66,
+        70,
+        76,
+        82,
+        {
+          "value": 90,
+          "label": 90,
+          "par": true
+        },
+        100,
+        112,
+        126,
+        142,
+        160,
+        180,
+        200,
+        220,
+        240,
+        260,
+        280,
+        {
+          "value": 300,
+          "label": 300,
+          "arrow": "up"
+        }
+      ],
+      [
+        {
+          "value": 46,
+          "label": 46,
+          "legend": 0,
+          "arrow": "down"
+        },
+        {
+          "value": 55,
+          "label": 55,
+          "legend": 0
+        },
+        {
+          "value": 60,
+          "label": 60,
+          "legend": 0
+        },
+        65,
+        70,
+        76,
+        {
+          "value": 82,
+          "label": 82,
+          "par": true
+        },
+        90,
+        100,
+        111,
+        125,
+        140,
+        155,
+        170,
+        185,
+        {
+          "value": 200,
+          "label": 200,
+          "arrow": "up"
+        }
+      ],
+      [
+        {
+          "value": 39,
+          "label": 39,
+          "legend": 1,
+          "arrow": "down"
+        },
+        {
+          "value": 48,
+          "label": 48,
+          "legend": 0
+        },
+        {
+          "value": 54,
+          "label": 54,
+          "legend": 0
+        },
+        {
+          "value": 60,
+          "label": 60,
+          "legend": 0
+        },
+        66,
+        71,
+        {
+          "value": 76,
+          "label": 76,
+          "par": true
+        },
+        82,
+        90,
+        100,
+        110,
+        120,
+        {
+          "value": 130,
+          "label": 130,
+          "arrow": "up"
+        }
+      ],
+      [
+        {
+          "value": 32,
+          "label": 32,
+          "legend": 1,
+          "arrow": "down"
+        },
+        {
+          "value": 41,
+          "label": 41,
+          "legend": 1
+        },
+        {
+          "value": 48,
+          "label": 48,
+          "legend": 0
+        },
+        {
+          "value": 55,
+          "label": 55,
+          "legend": 0
+        },
+        62,
+        67,
+        {
+          "value": 71,
+          "label": 71,
+          "par": true
+        },
+        76,
+        82,
+        90,
+        {
+          "value": 100,
+          "label": 100,
+          "arrow": "up"
+        }
+      ],
+      [
+        {
+          "value": 25,
+          "label": 25,
+          "legend": 2,
+          "arrow": "down"
+        },
+        {
+          "value": 34,
+          "label": 34,
+          "legend": 1
+        },
+        {
+          "value": 42,
+          "label": 42,
+          "legend": 1
+        },
+        {
+          "value": 50,
+          "label": 50,
+          "legend": 0
+        },
+        {
+          "value": 58,
+          "label": 58,
+          "legend": 0
+        },
+        65,
+        {
+          "value": 67,
+          "label": 67,
+          "par": true
+        },
+        71,
+        75,
+        {
+          "value": 80,
+          "label": 80,
+          "arrow": "up"
+        }
+      ],
+      [
+        {
+          "value": 18,
+          "label": 18,
+          "legend": 2,
+          "arrow": "down"
+        },
+        {
+          "value": 27,
+          "label": 27,
+          "legend": 2
+        },
+        {
+          "value": 36,
+          "label": 36,
+          "legend": 1
+        },
+        {
+          "value": 45,
+          "label": 45,
+          "legend": 1
+        },
+        {
+          "value": 54,
+          "label": 54,
+          "legend": 0
+        },
+        63,
+        67,
+        69,
+        {
+          "value": 70,
+          "label": 70,
+          "arrow": "up"
+        }
+      ],
+      [
+        {
+          "value": 10,
+          "label": 10,
+          "legend": 2
+        },
+        {
+          "value": 12,
+          "label": 12,
+          "legend": 2
+        },
+        {
+          "value": 30,
+          "label": 30,
+          "legend": 2
+        },
+        {
+          "value": 40,
+          "label": 40,
+          "legend": 1
+        },
+        {
+          "value": 50,
+          "label": 50,
+          "legend": 0
+        },
+        {
+          "value": 60,
+          "label": 60,
+          "legend": 0
+        },
+        67,
+        {
+          "value": 68,
+          "label": 68,
+          "arrow": "up"
+        }
+      ],
+      [
+        null,
+        {
+          "value": 10,
+          "label": 10,
+          "legend": 2
+        },
+        {
+          "value": 20,
+          "label": 20,
+          "legend": 2
+        },
+        {
+          "value": 30,
+          "label": 30,
+          "legend": 2
+        },
+        {
+          "value": 40,
+          "label": 40,
+          "legend": 1
+        },
+        {
+          "value": 50,
+          "label": 50,
+          "legend": 0
+        },
+        {
+          "value": 60,
+          "label": 60,
+          "legend": 0,
+          "arrow": "up"
+        }
+      ],
+      [
+        null,
+        null,
+        {
+          "value": 10,
+          "label": 10,
+          "legend": 2
+        },
+        {
+          "value": 20,
+          "label": 20,
+          "legend": 2
+        },
+        {
+          "value": 30,
+          "label": 30,
+          "legend": 2
+        },
+        {
+          "value": 40,
+          "label": 40,
+          "legend": 1
+        },
+        {
+          "value": 50,
+          "label": 50,
+          "legend": 0,
+          "arrow": "up"
+        }
+      ],
+      [
+        null,
+        null,
+        null,
+        {
+          "value": 10,
+          "label": 10,
+          "legend": 2
+        },
+        {
+          "value": 20,
+          "label": 20,
+          "legend": 2
+        },
+        {
+          "value": 30,
+          "label": 30,
+          "legend": 2
+        },
+        {
+          "value": 40,
+          "label": 40,
+          "legend": 1,
+          "arrow": "up"
+        }
+      ]
+    ],
+    "legend": [
+      {
+        "color": "yellow",
+        "description": "Shares of this corporation do not count toward the certificate limit",
+        "icon": "certificate"
+      },
+      {
+        "color": "orange",
+        "description": "Players may own more than 60% of this corporation",
+        "icon": "percentage"
+      }
+    ]
+  },
+  "tiles": {
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "4": 2,
+    "7": 4,
+    "8": 8,
+    "9": 7,
+    "14": 3,
+    "15": 2,
+    "16": 1,
+    "18": 1,
+    "19": 1,
+    "20": 1,
+    "23": 3,
+    "24": 3,
+    "25": 1,
+    "26": 1,
+    "27": 1,
+    "28": 1,
+    "29": 1,
+    "39": 1,
+    "40": 1,
+    "41": 2,
+    "42": 2,
+    "43": 2,
+    "44": 1,
+    "45": 2,
+    "46": 2,
+    "47": 1,
+    "53": 2,
+    "54": 1,
+    "55": 1,
+    "56": 1,
+    "57": 4,
+    "58": 2,
+    "59": 2,
+    "61": 2,
+    "62": 1,
+    "63": 3,
+    "64": 1,
+    "65": 1,
+    "66": 1,
+    "67": 1,
+    "68": 1,
+    "69": 1,
+    "70": 1
+  },
+  "map": {
+    "hexes": [
+      {
+        "color": "offboard",
+        "offBoardRevenue": {
+          "name": {
+            "name": "Norge"
+          },
+          "revenues": [
+            {
+              "color": "yellow",
+              "cost": 40
+            },
+            {
+              "color": "green",
+              "cost": 60
+            },
+            {
+              "color": "brown",
+              "cost": "80"
+            },
+            {
+              "color": "gray",
+              "cost": "100"
+            }
+          ]
+        },
+        "hexes": [
+          "C1"
+        ],
+        "track": [
+          {
+            "side": 6,
+            "type": "offboard"
+          }
+        ]
+      },
+      {
+        "color": "offboard",
+        "offBoardRevenue": {
+          "name": {
+            "name": "England"
+          },
+          "revenues": [
+            {
+              "color": "yellow",
+              "cost": 40
+            },
+            {
+              "color": "green",
+              "cost": 60
+            },
+            {
+              "color": "brown",
+              "cost": "80"
+            },
+            {
+              "color": "gray",
+              "cost": "100"
+            }
+          ]
+        },
+        "hexes": [
+          "A15"
+        ],
+        "track": [
+          {
+            "side": 4,
+            "type": "offboard"
+          },
+          {
+            "side": 5,
+            "type": "offboard"
+          },
+          {
+            "side": 6,
+            "type": "offboard"
+          }
+        ]
+      },
+      {
+        "color": "offboard",
+        "offBoardRevenue": {
+          "name": {
+            "name": "Preussen"
+          },
+          "revenues": [
+            {
+              "color": "yellow",
+              "cost": 40
+            },
+            {
+              "color": "green",
+              "cost": 60
+            },
+            {
+              "color": "brown",
+              "cost": "80"
+            },
+            {
+              "color": "gray",
+              "cost": "100"
+            }
+          ]
+        },
+        "hexes": [
+          "F26"
+        ],
+        "track": [
+          {
+            "side": 3,
+            "type": "offboard"
+          },
+          {
+            "side": 4,
+            "type": "offboard"
+          }
+        ]
+      },
+      {
+        "color": "offboard",
+        "offBoardRevenue": {
+          "name": {
+            "name": "Sverige"
+          },
+          "revenues": [
+            {
+              "color": "yellow",
+              "cost": 40
+            },
+            {
+              "color": "green",
+              "cost": 60
+            },
+            {
+              "color": "brown",
+              "cost": "80"
+            },
+            {
+              "color": "gray",
+              "cost": "100"
+            }
+          ]
+        },
+        "hexes": [
+          "J12"
+        ],
+        "track": [
+          {
+            "side": 2,
+            "type": "offboard"
+          },
+          {
+            "side": 3,
+            "type": "offboard"
+          }
+        ]
+      },
+      {
+        "color": "gray",
+        "hexes": [
+          "J22",
+          "G23", "I23",
+          "B24", "H24", "J24",
+          "A25", "C25", "G25", "I25",
+          "B26", "D26", "H26", "J26"
+        ]
+      },
+      {
+        "color": "plain",
+        "terrain": [
+          {
+            "type": "swamp",
+            "cost": 20
+          }
+        ],
+        "hexes": [
+          "B14",
+          "B22"
+        ]
+      },
+      {
+        "color": "plain",
+        "labels": [
+          {
+            "label": "D"
+          }
+        ],
+        "centerTowns": [
+          {
+            "name": {
+              "name": "Husum"
+            }
+          }
+        ],
+        "terrain": [
+          {
+            "type": "swamp",
+            "cost": 20
+          }
+        ],
+        "hexes": [
+          "B20"
+        ]
+      },
+      {
+        "color": "plain",
+        "terrain": [
+          {
+            "type": "swamp",
+            "cost": 20
+          }
+        ],
+        "borders":[
+          {
+            "color": "offboard",
+            "dashed": true,
+            "side": 4
+          }
+        ],
+        "hexes": [
+          "B18"
+        ]
+      },
+      {
+        "color": "plain",
+        "terrain": [
+          {
+            "type": "swamp",
+            "cost": 20,
+            "percent": 0.5,
+            "angle": 180
+          }
+        ],
+        "centerTowns": [
+          {
+            "name": {
+              "name": "Sylbaran"
+            },
+            "percent": 0.5
+          }
+        ],
+        "borders": [
+          {
+            "color": "black",
+            "side": 6
+          }
+        ],
+        "hexes": [
+          "B14"
+        ]
+      },
+      {
+        "color": "offboard",
+        "offBoardRevenue": {
+          "name": {
+            "name": "Kristiansand"
+          },
+          "revenues": [
+            {
+              "color": "yellow",
+              "cost": 20
+            },
+            {
+              "color": "green",
+              "cost": 30
+            },
+            {
+              "color": "brown",
+              "cost": 40
+            },
+            {
+              "color": "gray",
+              "cost": 50
+            }
+          ]
+        },
+        "hexes": [
+          "C5"
+        ],
+        "track": [
+          {
+            "side": 1,
+            "type": "offboard"
+          },
+          {
+            "side": 6,
+            "type": "offboard"
+          }
+        ]
+      },
+      {
+        "color": "plain",
+        "cities": [
+          {
+            "size": 1,
+            "name": {
+              "name": "Esbjerg"
+            }
+          }
+        ],
+        "borders": [
+          {
+            "side": 6,
+            "color": "offboard",
+            "dashed": true
+          }
+        ],
+        "hexes": [
+          "B14"
+        ]
+      },
+      {
+        "color": "plain",
+        "terrain": [
+          {
+            "type": "swamp",
+            "cost": 20
+          }
+        ],
+        "centerTowns": [
+          {
+            "percent": 0.667,
+            "angle": 150,
+            "name": {
+              "name": "Ribe"
+            }
+          }
+        ],
+        "borders": [
+          {
+            "side": 1,
+            "color": "offboard",
+            "dashed": true
+          },
+          {
+            "side": 6,
+            "color": "offboard",
+            "dashed": true
+          },
+          {
+            "side": 5,
+            "color": "offboard",
+            "dashed": true
+          }
+        ],
+        "hexes": [
+          "B16"
+        ]
+      },
+      {
+        "color": "plain",
+        "borders": [
+          {
+            "side": 2,
+            "color": "offboard",
+            "dashed": true
+          },
+          {
+            "side": 3,
+            "color": "offboard",
+            "dashed": true
+          },
+          {
+            "side": 4,
+            "color": "offboard",
+            "dashed": true
+          },
+          {
+            "side": 5,
+            "color": "offboard",
+            "dashed": true
+          },
+          {
+            "side": 6,
+            "color": "water"
+          }
+        ],
+        "hexes": [
+          "C15"
+        ]
+      },
+      {
+        "color": "plain",
+        "borders": [
+          {
+            "side": 3,
+            "color": "offboard",
+            "dashed": true
+          },
+          {
+            "side": 5,
+            "color": "water"
+          }
+        ],
+        "hexes": [
+          "C17"
+        ]
+      },
+      {
+        "color": "plain",
+        "hexes": [
+          "D2",
+          "B4",
+          "C5", "E5",
+          "A7", "C7",
+          "B8",
+          "E9",
+          "B10",
+          "A11", "C11", "I11",
+          "B12", "H12",
+          "A13", "G13",
+          "I15",
+          "H18",
+          "C21", "E21",
+          "F22",
+          "C23", "E23",
+          "D24", "F24"
+
+        ]
+      },
+      {
+        "color": "plain",
+        "labels": [
+          {
+            "label": "D"
+          }
+        ],
+        "cities": [
+          {
+            "angle": 270,
+            "percent": 0.667,
+            "name": {
+              "name": "Kiel"
+            }
+          }
+        ],
+        "hexes": [
+          "D20"
+        ]
+      },
+      {
+        "color": "plain",
+        "centerTowns": [
+          {
+            "name": {
+              "name": "Neumünster"
+            }
+          }
+        ],
+        "hexes": [
+          "D22"
+        ]
+      },
+      {
+        "color": "plain",
+        "labels": [
+          {
+            "label": "D"
+          }
+        ],
+        "cities": [
+          {
+            "name": {
+              "name": "Flensborg"
+            },
+            "companies": [
+              {
+                "label": "FSJ"
+              }
+            ]
+          }
+        ],
+        "hexes": [
+          "C19"
+        ]
+      },
+      {
+        "color": "plain",
+        "labels": [
+          {
+            "label": "D"
+          }
+        ],
+        "cities": [
+          {
+            "name": {
+              "name": "Hamborg"
+            }, 
+            "companies": [
+              {"label": "AK"}
+            ]
+          }
+        ],
+        "hexes": [
+          "E25"
+        ]
+      },
+      {
+        "color": "water",
+        "values": [
+          {
+            "percent": 0.6,
+            "angle": 75,
+            "value": 20
+          },
+          {
+            "percent": 0.6,
+            "angle": -15,
+            "value": 10
+          }
+        ],
+        "towns": [
+          {
+            "angle": 120,
+            "percent": 0.6,
+            "rotation": 300,
+            "name": {
+              "name": "Fredericia"
+            }
+          },
+          {
+            "angle": -60,
+            "percent": 0.6,
+            "rotation": 300,
+            "name": {
+              "name": "Middelfart"
+            }
+          }
+        ],
+        "icons": [
+          {
+            "percent": 0.667,
+            "angle": 210,
+            "type": "port"
+          }
+        ],
+        "track": [
+          {
+            "side": 3,
+            "end": 0.25,
+            "type": "straight"
+          }, 
+          {
+            "start": 0.25,
+            "end": 0.75,
+            "side": 3,
+            "type": "straight",
+            "gauge": "narrow",
+            "color": "water"
+          }, 
+          {
+            "start": 0.75,
+            "side": 3,
+            "type": "straight"
+          }
+        ],
+        "borders": [
+          {
+            "side": 2,
+            "color": "offboard",
+            "dashed": true
+          }
+        ],
+        "hexes": [
+          "D14"
+        ]
+      },
+      {
+        "color": "plain",
+        "cities": [
+          {
+            "name": {
+              "name": "Odense"
+            }
+          }
+        ],
+        "hexes": [
+          "E15"
+        ]
+      },
+      {
+        "color": "plain",
+        "centerTowns": [
+          {
+            "name": {
+              "name": "Assens"
+            }
+          }
+        ],
+        "borders": [
+          {
+            "side": 3,
+            "color": "water"
+          },
+          {
+            "side": 2,
+            "color": "water"
+          }
+        ],
+        "hexes": [
+          "D16"
+        ]
+      },
+      {
+        "color": "plain",
+        "cities": [
+          {
+            "name": {
+              "name": "Svendborg"
+            },
+            "companies": [
+              {
+                "label": "SNB"
+              }
+            ]
+          }
+        ],
+        "hexes": [
+          "E17"
+        ]
+      },
+      {
+        "color": "green",
+        "labels": [
+          {
+            "percent": 0.7,
+            "angle": 180,
+            "label": "K"
+          }
+        ],
+        "values": [
+          {
+
+            "value": 30,
+            "angle": 30,
+            "percent": 0.667
+          }
+        ],
+        "cities": [
+          {
+            "size": 2,
+            "name": {
+              "name": "København"
+            },
+            "companies": [
+              {
+                "label": "DSJ"
+              }
+            ]
+          }
+        ],
+        "track": [
+          {
+            "side": 1
+          }, 
+          {
+            "side": 2
+          }, 
+          {
+            "side": 3
+          }, 
+          {
+            "side": 6,
+            "gauge": "narrow",
+            "color": "water"
+          }
+        ],
+        "hexes": [
+          "I13"
+        ]
+      },
+      {
+        "color": "water",
+        "track":[
+          {
+            "side": 1,
+            "type": "gentle",
+            "gauge": "narrow",
+            "color": "water"
+          }
+        ],
+        "hexes":[
+          "J14"
+        ]
+      },
+      {
+        "color": "water",
+        "track":[
+          {
+            "side": 1,
+            "type": "straight",
+            "gauge": "narrow",
+            "color": "water"
+          }
+        ],
+        "hexes":[
+          "J16"
+        ]
+      },
+      {
+        "color": "water",
+        "track":[
+          {
+            "side": 4,
+            "type": "gentle",
+            "gauge": "narrow",
+            "color": "water"
+          }
+        ],
+        "hexes":[
+          "J18"
+        ]
+      },
+      {
+        "color": "water",
+        "values": [
+          {
+            "value": 20
+          }
+        ],
+        "mediumCities": [
+          {
+            "name": {
+              "name": "Rønne"
+            }
+          }
+        ],
+        "track":[
+          {
+            "side": 3,
+            "gauge": "narrow",
+            "color": "water"
+          }
+        ],
+        "hexes":[
+          "K19"
+        ]
+      },
+      {
+        "color": "plain",
+        "cities": [
+          {
+            "angle": 270,
+            "percent": 0.667,
+            "name": {
+              "name": "Faxe"
+            },
+            "companies": [
+              {
+                "label": "FJ"
+              }
+            ]
+          }
+        ],
+        "hexes": [
+          "H16"
+        ]
+      },
+      {
+        "color": "plain",
+        "centerTowns": [
+          {
+            "angle": 225,
+            "percent": 0.80,
+            "name": {
+              "reverse": true,
+              "name": "Roskilde"
+            }
+          }
+        ],
+        "hexes": [
+          "H14"
+        ]
+      },
+      {
+        "color": "plain",
+        "centerTowns": [
+          
+        ],
+        "hexes": [
+          "G15"
+        ]
+      },
+      {
+        "color": "plain",
+        "centerTowns": [
+          {
+            "angle": 225,
+            "percent": 0.5,
+            "name": {
+              "name": "Vejle"
+            }
+          }
+        ],
+        "borders": [
+          {
+            "side": 1,
+            "color": "offboard",
+            "dashed": true
+          }
+        ],
+        "hexes": [
+          "C13"
+        ]
+      },
+      {
+        "color": "plain",
+        "centerTowns": [
+          {
+            "angle": 90,
+            "percent": 0.3,
+            "name": {
+              "name": "Horsens"
+            }
+          }
+        ],
+        "hexes": [
+          "D12"
+        ]
+      },
+      {
+        "color": "plain",
+        "cities": [
+          {
+            "angle": 270,
+            "percent": 0.6,
+            "name": {
+              "name": "Århus"
+            },
+            "companies": [
+              {
+                "label": "DDJ"
+              }
+            ]
+          }
+        ],
+        "hexes": [
+          "D10"
+        ]
+      },
+      {
+        "color": "plain",
+        "centerTowns": [
+          {
+            "angle": 180,
+            "percent": 0.6,
+            "name": {
+              "name": "Viborg"
+            }
+          }
+        ],
+        "hexes": [
+          "C9"
+        ]
+      },
+      {
+        "color": "plain",
+        "cities": [
+          {
+            "angle": 270,
+            "percent": 0.6,
+            "name": {
+              "name": "Holstebro"
+            }
+          }
+        ],
+        "hexes": [
+          "A9"
+        ]
+      },
+      {
+        "color": "plain",
+        "centerTowns": [
+          {
+            "angle": 180,
+            "percent": 0.6,
+            "name": {
+              "name": "Thisted"
+            }
+          }
+        ],
+        "hexes": [
+          "B6"
+        ]
+      },
+      
+      {
+        "color": "plain",
+        "cities": [
+          {
+            "name": {
+              "name": "Randers"
+            }
+          }
+        ],
+        "hexes": [
+          "D8"
+        ]
+      },
+      {
+        "color": "plain",
+        "centerTowns": [
+          {
+            "angle": 0,
+            "percent": 0.8,
+            "name": {
+              "name": "Nørresundby"
+            }
+          }
+        ],
+        "hexes": [
+          "D4"
+        ]
+      },
+      {
+        "color": "plain",
+        "cities": [
+          {
+            "angle": 180,
+            "percent": 0.6,
+            "name": {
+              "reverse": true,
+              "name": "Aalborg"
+            }
+          }
+        ],
+        "hexes": [
+          "D6"
+        ]
+      },
+      {
+        "color": "plain",
+        "centerTowns": [
+          {
+            "angle": 350,
+            "percent": 0.667,
+            "name": {
+              "name": "Frederikshavn"
+            }
+          }
+        ],
+        "hexes": [
+          "E3"
+        ]
+      },
+      {
+        "color": "plain",
+        "centerTowns": [
+          {
+            "angle": 350,
+            "percent": 0.667,
+            "name": {
+              "name": "Skagen"
+            }
+          }
+        ],
+        "hexes": [
+          "E1"
+        ]
+      },
+      {
+        "color": "water",
+        "towns": [
+          {
+            "angle": 60,
+            "percent": 0.6,
+            "rotation": 240,
+            "name": {
+              "name": "Grenaa"
+            }
+          }
+        ],
+        "icons": [
+          {
+            "percent": 0.667,
+            "angle": 150,
+            "type": "port"
+          }
+        ],
+        "track": [
+          {
+            "side": 5,
+            "type": "straight",
+            "end": 0.75,
+            "gauge": "narrow",
+            "color": "water"
+          },
+          {
+            "side": 5,
+            "type": "straight",
+            "start": 0.75
+          }
+        ],
+        "hexes": [
+          "F8"
+        ]
+      },
+      {
+        "color": "water",
+        "towns": [
+          {
+            "rotation": 240,
+            "name": {
+              "name": "Anholt"
+            }
+          }
+        ],
+        "track": [
+          {
+            "side": 2,
+            "gauge": "narrow",
+            "color": "water"
+          }
+        ],
+        "hexes": [
+          "G7"
+        ]
+      },
+      {
+        "color": "water",
+        "values": [
+          {
+            "angle": -60,
+            "percent": 0.667,
+            "value": 10
+          },
+          {
+            "angle": 60,
+            "percent": 0.667,
+            "value": 10
+          }
+        ],
+        "icons": [
+          {
+            "percent": 0.667,
+            "angle": 180,
+            "type": "port"
+          }
+        ],
+        "towns": [
+          {
+            "rotation": 110,
+            "percent": 0.667,
+            "angle": 122.5,
+            "name": {
+              "reverse": true,
+              "name": "Nyborg"
+            }
+          },
+          {
+            "rotation": 70,
+            "angle": 240,
+            "percent": 0.667,
+            "name": {
+              "reverse": true,
+              "name": "Korsør"
+            }
+          }
+        ],
+        "track": [
+          {
+            "start": 0.75,
+            "side": 3,
+            "type": "gentle"
+          },
+          {
+            "start": 0.25,
+            "end": 0.75,
+            "side": 3,
+            "gauge": "narrow",
+            "color": "water",
+            "type": "gentle"
+          },
+          {
+            "end": 0.25,
+            "side": 3,
+            "type": "gentle"
+          }
+        ],
+        "hexes": [
+          "F16"
+        ]
+      },
+      {
+        "color": "water",
+        "towns": [
+          {
+            "rotation": 240,
+            "name": {
+              "name": "Rødbyhavn"
+            }
+          }
+        ],
+        "icons": [
+          {
+            "percent": 0.5,
+            "angle": -30,
+            "type": "port"
+          }
+        ],
+        "borders": [
+          {
+            "side": 2,
+            "color": "offboard",
+            "dashed": true
+          }
+        ],
+        "track": [
+          {
+            "end": 0.5,
+            "side": 2,
+            "type": "straight",
+            "gauge": "narrow",
+            "color": "water"
+          },
+          {
+            "start": 0.5,
+            "side": 2,
+            "type": "straight"
+          }
+        ],
+        "hexes": [
+          "G19"
+        ]
+      },
+      {
+        "color": "water",
+        "towns": [
+          {
+            "rotation": 190,
+            "percent": 0.6,
+            "name": {
+              "name": "Puttgarden"
+            }
+          }
+        ],
+        "icons": [
+          {
+            "percent": 0.5,
+            "angle": 90,
+            "type": "port"
+          }
+        ],
+        "borders": [
+          {
+            "side": 5,
+            "color": "offboard",
+            "dashed": true
+          }
+        ],
+        "track": [
+          {
+            "side": 5,
+            "start": 0.75,
+            "type": "gentle"
+          },
+          {
+            "side": 5,
+            "end": 0.75,
+            "type": "gentle",
+            "gauge": "narrow",
+            "color": "water"
+          }
+        ],
+        "hexes": [
+          "F20"
+        ]
+      }
+    ]
+  }
+}
