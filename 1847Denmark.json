@@ -6,72 +6,75 @@
   },
   "info": {
     "title": "Denmark 1847",
-    "designer": "Nikolaj Lepka",
+    "designer": "Niko Lepka",
     "publisher": "City Hare Studio",
     "background": "purple",
     "titleX": 700,
     "titleSize": 80,
     "currency": "#kr.",
-    "orientation": "horizontal",
-    "marketTokens": 2
+    "orientation": "horizontal"
   },
   "wip": true,
   "links": {
     "bgg": "https://www.boardgamegeek.com/boardgame/18291/unpublished-prototype",
-    "rules": "https://www.dropbox.com/sh/4onmo5d7mrx6ig7/AACmRPhO4cT_khBoWcpc8R57a?dl=0"
+    "rules": null
   },
-  "tokens": [
-    "Round"
-  ],
+  "tokens": ["Round"],
   "bank": 8000,
   "players": [
     {
       "number": 2,
-      "certLimit": 17,
-      "capital": 600
+      "certLimit": 25,
+      "capital": 420
     },
     {
       "number": 3,
-      "certLimit": 15,
-      "cnkapital": 400
+      "certLimit": 19,
+      "capital": 420
     },
     {
       "number": 4,
+      "certLimit": 14,
+      "capital": 420
+    },
+    {
+      "number": 5,
       "certLimit": 12,
-      "capital": 300
+      "capital": 390
+    },
+    {
+      "number": 6,
+      "certLimit": 11,
+      "capital": 390
     }
   ],
   "tokenTypes": {
-    "minor": [
-      "Free",
-      50
-    ],
-    "default": [
-      "Home",
-      40,
-      60,
-      80,
-      "",
-      "Exchange",
-      ""
-    ]
+    "minor": ["Home", 50],
+    "default": ["Home", 40, 60, 80]
   },
   "shareTypes": {
-    "minor": [],
-    "default": [
+    "minor": [
       {
         "quantity": 1,
         "label": "President's Certificate",
-        "percent": "20/40",
+        "percent": 40,
         "shares": 2
       },
       {
         "quantity": 3,
-        "percent": "20/10",
+        "percent": 20,
         "shares": 1
+      }
+    ],
+    "default": [
+      {
+        "quantity": 1,
+        "label": "President's Certificate",
+        "percent": 40,
+        "shares": 2
       },
       {
-        "quantity": 5,
+        "quantity": 8,
         "percent": 10,
         "shares": 1
       }
@@ -81,19 +84,19 @@
     {
       "name": "Det Sjællandske Jernbaneselskab",
       "minor": true,
-      "abbrev": "DSJ",
+      "abbrev": "SJS",
       "color": "red"
     },
     {
-      "name": "Altona-Kiel",
+      "name": "Altona-Kieler Eisenbahn-Gesellschaft",
       "minor": true,
-      "abbrev": "AK",
+      "abbrev": "AKE",
       "color": "green"
     },
     {
-      "name": "Det Danske Jernbanedriftselskab",
+      "name": "Østjydske Jernbane",
       "minor": true,
-      "abbrev": "DDJ",
+      "abbrev": "ØJJ",
       "color": "yellow"
     },
     {
@@ -103,15 +106,27 @@
       "color": "blue"
     },
     {
-      "name": "Svendborg-Nyborg Bybanen",
+      "name": "Sydfyenske Jernbane",
       "minor": true,
-      "abbrev": "SNB",
+      "abbrev": "SFJ",
       "color": "purple"
     },
     {
       "name": "Frederik VIIs Sydslesvigske Jernbane",
       "minor": true,
-      "abbrev": "FSJ",
+      "abbrev": "F7J",
+      "color": "orange"
+    },
+    {
+      "name": "Preußische Staatseisenbahn",
+      "minor": false,
+      "abbrev": "PSB",
+      "color": "black"
+    },
+    {
+      "name": "Danske Statsbaner",
+      "minor": false,
+      "abbrev": "DSB",
       "color": "white"
     }
   ],
@@ -132,10 +147,18 @@
     },
     {
       "name": "4",
-      "quantity": 4,
+      "quantity": 3,
       "price": 250,
       "color": "green",
       "rust": "D"
+    },
+    {
+      "name": "4*",
+      "quantity": 1,
+      "price": 250,
+      "color": "green",
+      "rust": "D",
+      "description": "2nd Schleswig War breaks out. Replace all D tiles with their striped counterparts. Crossing the border now costs 10×T, where T is the train level. DSB and PSB are now available."
     },
     {
       "name": "5",
@@ -151,9 +174,10 @@
     },
     {
       "name": "D",
-      "quantity": 6,
+      "quantity": "∞",
+      "print": 9,
       "price": 1000,
-      "color": "gray",
+      "color": "brown",
       "description": "Cost 800 when trading in a 4T, 5T or 6T",
       "available": "6",
       "discount": {
@@ -161,16 +185,46 @@
         "5": 300,
         "6": 300
       }
-    },
-    {
-      "name": "5",
-      "quantity": 1,
-      "color": "brown",
-      "description": "Granted By P7"
     }
   ],
   "privates": [],
   "phases": [
+    {
+      "minor": true,
+      "name": "2",
+      "limit": 4,
+      "tiles": "yellow"
+    },
+    {
+      "minor": true,
+      "name": "3",
+      "limit": 4,
+      "tiles": "green"
+    },
+    {
+      "minor": true,
+      "name": "4",
+      "limit": 3,
+      "tiles": "green"
+    },
+    {
+      "minor": true,
+      "name": "5",
+      "limit": 3,
+      "tiles": "brown"
+    },
+    {
+      "minor": true,
+      "name": "6",
+      "limit": 2,
+      "tiles": "brown"
+    },
+    {
+      "minor": true,
+      "name": "D",
+      "limit": 2,
+      "tiles": "gray"
+    },
     {
       "name": "2",
       "limit": 4,
@@ -244,12 +298,7 @@
   "turns": [
     {
       "name": "Stock Round",
-      "steps": [
-        "Place or incease bid",
-        "Sell then Buy shares",
-        "Launch a public company",
-        "Auction a minor company"
-      ],
+      "steps": ["Buy one certificate", "Sell any number of certificates"],
       "ordered": false
     },
     {
@@ -259,430 +308,248 @@
         "Purchase a station",
         "Run trains",
         "Pay dividends or withhold revenue",
-        "Purchase trains",
-        "Acquire a minor company",
-        "Redeem or Issue Shares"
+        "Purchase trains"
       ],
-      "ordered": true,
-      "optional": [
-        "Purchase private companies"
-      ]
+      "ordered": true
     }
   ],
   "stock": {
     "type": "2D",
     "par": {
-      "values": [
-        100,
-        90,
-        82,
-        76,
-        71,
-        67
-      ]
+      "values": [100, 90, 80, 75, 70, 65]
     },
     "movement": {
-      "up": [
-        "Sold out"
-      ],
-      "down": [
-        "Every share sold"
-      ],
-      "left": [
-        "Withheld revenue"
-      ],
-      "right": [
-        "Paid dividends"
-      ]
+      "up": ["Sold out"],
+      "down": ["Every share sold"],
+      "left": ["Withheld revenue"],
+      "right": ["Paid dividends"]
     },
     "market": [
       [
         {
-          "value": 60,
-          "label": 60,
-          "legend": 0,
+          "label": "75",
           "arrow": "down"
         },
-        67,
-        71,
-        76,
-        82,
+        80,
         90,
         {
-          "value": 100,
-          "label": 100,
+          "label": "100",
           "par": true
         },
-        112,
-        126,
-        142,
-        160,
-        180,
+        110,
+        125,
+        140,
+        155,
+        175,
         200,
         225,
-        250,
-        275,
-        300,
-        325,
+        255,
+        285,
+        315,
         350
       ],
       [
         {
-          "value": 53,
-          "label": 53,
-          "legend": 0,
+          "label": "70",
           "arrow": "down"
         },
+        75,
+        80,
         {
-          "value": 60,
-          "label": 60,
-          "legend": 0
-        },
-        66,
-        70,
-        76,
-        82,
-        {
-          "value": 90,
-          "label": 90,
+          "label": "90",
           "par": true
         },
         100,
-        112,
-        126,
-        142,
-        160,
-        180,
-        200,
-        220,
-        240,
-        260,
-        280,
-        {
-          "value": 300,
-          "label": 300,
-          "arrow": "up"
-        }
-      ],
-      [
-        {
-          "value": 46,
-          "label": 46,
-          "legend": 0,
-          "arrow": "down"
-        },
-        {
-          "value": 55,
-          "label": 55,
-          "legend": 0
-        },
-        {
-          "value": 60,
-          "label": 60,
-          "legend": 0
-        },
-        65,
-        70,
-        76,
-        {
-          "value": 82,
-          "label": 82,
-          "par": true
-        },
-        90,
-        100,
-        111,
+        110,
         125,
         140,
         155,
-        170,
-        185,
+        175,
+        200,
+        225,
+        255,
+        285,
         {
-          "value": 200,
-          "label": 200,
+          "label": "315",
           "arrow": "up"
         }
       ],
       [
         {
-          "value": 39,
-          "label": 39,
-          "legend": 1,
+          "label": "65",
           "arrow": "down"
         },
+        70,
+        75,
         {
-          "value": 48,
-          "label": 48,
-          "legend": 0
-        },
-        {
-          "value": 54,
-          "label": 54,
-          "legend": 0
-        },
-        {
-          "value": 60,
-          "label": 60,
-          "legend": 0
-        },
-        66,
-        71,
-        {
-          "value": 76,
-          "label": 76,
+          "label": "80",
           "par": true
         },
-        82,
         90,
         100,
         110,
-        120,
+        125,
+        140,
+        155,
+        175,
         {
-          "value": 130,
-          "label": 130,
+          "label": "200",
           "arrow": "up"
         }
       ],
       [
         {
-          "value": 32,
-          "label": 32,
-          "legend": 1,
+          "label": "60",
           "arrow": "down"
-        },
-        {
-          "value": 41,
-          "label": 41,
-          "legend": 1
-        },
-        {
-          "value": 48,
-          "label": 48,
-          "legend": 0
-        },
-        {
-          "value": 55,
-          "label": 55,
-          "legend": 0
-        },
-        62,
-        67,
-        {
-          "value": 71,
-          "label": 71,
-          "par": true
-        },
-        76,
-        82,
-        90,
-        {
-          "value": 100,
-          "label": 100,
-          "arrow": "up"
-        }
-      ],
-      [
-        {
-          "value": 25,
-          "label": 25,
-          "legend": 2,
-          "arrow": "down"
-        },
-        {
-          "value": 34,
-          "label": 34,
-          "legend": 1
-        },
-        {
-          "value": 42,
-          "label": 42,
-          "legend": 1
-        },
-        {
-          "value": 50,
-          "label": 50,
-          "legend": 0
-        },
-        {
-          "value": 58,
-          "label": 58,
-          "legend": 0
         },
         65,
+        70,
         {
-          "value": 67,
-          "label": 67,
+          "label": "75",
           "par": true
         },
-        71,
-        75,
+        80,
+        90,
+        100,
+        110,
+        125,
         {
-          "value": 80,
-          "label": 80,
+          "label": "140",
           "arrow": "up"
         }
       ],
       [
         {
-          "value": 18,
-          "label": 18,
-          "legend": 2,
+          "label": "55",
+          "arrow": "down"
+        },
+        60,
+        65,
+        {
+          "label": "70",
+          "par": true
+        },
+        75,
+        80,
+        90,
+        {
+          "label": "100",
+          "arrow": "up"
+        }
+      ],
+      [
+        {
+          "label": "50",
+          "legend": 0,
+          "arrow": "down"
+        },
+        55,
+        60,
+        {
+          "label": "65",
+          "par": true
+        },
+        70,
+        75,
+        {
+          "label": "80",
+          "arrow": "up"
+        }
+      ],
+      [
+        {
+          "label": "45",
+          "legend": 0,
           "arrow": "down"
         },
         {
-          "value": 27,
-          "label": 27,
-          "legend": 2
-        },
-        {
-          "value": 36,
-          "label": 36,
-          "legend": 1
-        },
-        {
-          "value": 45,
-          "label": 45,
-          "legend": 1
-        },
-        {
-          "value": 54,
-          "label": 54,
+          "label": "50",
           "legend": 0
         },
-        63,
-        67,
-        69,
+        55,
+        60,
+        65,
         {
-          "value": 70,
-          "label": 70,
+          "label": "70",
           "arrow": "up"
         }
       ],
       [
         {
-          "value": 10,
-          "label": 10,
-          "legend": 2
-        },
-        {
-          "value": 12,
-          "label": 12,
-          "legend": 2
-        },
-        {
-          "value": 30,
-          "label": 30,
-          "legend": 2
-        },
-        {
-          "value": 40,
-          "label": 40,
-          "legend": 1
-        },
-        {
-          "value": 50,
-          "label": 50,
-          "legend": 0
-        },
-        {
-          "value": 60,
-          "label": 60,
-          "legend": 0
-        },
-        67,
-        {
-          "value": 68,
-          "label": 68,
-          "arrow": "up"
-        }
-      ],
-      [
-        null,
-        {
-          "value": 10,
-          "label": 10,
-          "legend": 2
-        },
-        {
-          "value": 20,
-          "label": 20,
-          "legend": 2
-        },
-        {
-          "value": 30,
-          "label": 30,
-          "legend": 2
-        },
-        {
-          "value": 40,
-          "label": 40,
-          "legend": 1
-        },
-        {
-          "value": 50,
-          "label": 50,
-          "legend": 0
-        },
-        {
-          "value": 60,
-          "label": 60,
+          "label": "40",
           "legend": 0,
+          "arrow": "down"
+        },
+        {
+          "label": "45",
+          "legend": 0
+        },
+        {
+          "label": "50",
+          "legend": 0
+        },
+        55,
+        {
+          "label": "60",
           "arrow": "up"
         }
       ],
       [
-        null,
-        null,
         {
-          "value": 10,
-          "label": 10,
-          "legend": 2
-        },
-        {
-          "value": 20,
-          "label": 20,
-          "legend": 2
-        },
-        {
-          "value": 30,
-          "label": 30,
-          "legend": 2
-        },
-        {
-          "value": 40,
-          "label": 40,
-          "legend": 1
-        },
-        {
-          "value": 50,
-          "label": 50,
-          "legend": 0,
-          "arrow": "up"
-        }
-      ],
-      [
-        null,
-        null,
-        null,
-        {
-          "value": 10,
-          "label": 10,
-          "legend": 2
-        },
-        {
-          "value": 20,
-          "label": 20,
-          "legend": 2
-        },
-        {
-          "value": 30,
-          "label": 30,
-          "legend": 2
-        },
-        {
-          "value": 40,
-          "label": 40,
+          "label": "30",
           "legend": 1,
+          "arrow": "down"
+        },
+        {
+          "label": "40",
+          "legend": 0
+        },
+        {
+          "label": "45",
+          "legend": 0
+        },
+        {
+          "label": "50",
+          "legend": 0,
+          "arrow": "up"
+        }
+      ],
+      [
+        {
+          "label": "20",
+          "legend": 1,
+          "arrow": "down"
+        },
+        {
+          "label": "30",
+          "legend": 1
+        },
+        {
+          "label": "40",
+          "legend": 0
+        },
+        {
+          "label": "45",
+          "legend": 0,
+          "arrow": "up"
+        }
+      ],
+      [
+        {
+          "label": "10",
+          "legend": 1
+        },
+        {
+          "label": "20",
+          "legend": 1
+        },
+        {
+          "label": "30",
+          "legend": 1
+        },
+        {
+          "label": "40",
+          "legend": 0,
           "arrow": "up"
         }
       ]
@@ -701,21 +568,21 @@
     ]
   },
   "tiles": {
-    "1": 1,
-    "2": 1,
     "3": 2,
-    "4": 2,
-    "7": 4,
-    "8": 8,
-    "9": 7,
-    "14": 3,
-    "15": 2,
+    "5": 2,
+    "6": 2,
+    "7": 2,
+    "8": 5,
+    "9": 5,
+    "12": 1,
+    "13": 1,
+    "14": 1,
+    "15": 3,
     "16": 1,
-    "18": 1,
     "19": 1,
     "20": 1,
-    "23": 3,
-    "24": 3,
+    "23": 2,
+    "24": 2,
     "25": 1,
     "26": 1,
     "27": 1,
@@ -723,38 +590,324 @@
     "29": 1,
     "39": 1,
     "40": 1,
-    "41": 2,
-    "42": 2,
-    "43": 2,
-    "44": 1,
-    "45": 2,
-    "46": 2,
+    "41": 1,
+    "42": 1,
+    "45": 1,
+    "46": 1,
     "47": 1,
-    "53": 2,
-    "54": 1,
-    "55": 1,
-    "56": 1,
-    "57": 4,
-    "58": 2,
-    "59": 2,
-    "61": 2,
-    "62": 1,
-    "63": 3,
-    "64": 1,
-    "65": 1,
-    "66": 1,
-    "67": 1,
-    "68": 1,
-    "69": 1,
-    "70": 1
+    "57": 2,
+    "58": 3,
+    "205": 1,
+    "206": 1,
+    "448": 4,
+    "611": 2,
+    "3d": {
+      "labels": [
+        {
+          "label": "D"
+        }
+      ],
+      "values": [
+        {
+          "value": 20
+        }
+      ],
+      "towns": [
+        {
+          "rotation": -60,
+          "angle": 30,
+          "percent": 0.57
+        }
+      ],
+      "track": [
+        {
+          "side": 1,
+          "type": "sharp"
+        }
+      ],
+      "color": "yellow",
+      "quantity": 2
+    },
+    "3dd": {
+      "labels": [
+        {
+          "label": "D"
+        }
+      ],
+      "values": [
+        {
+          "value": 20
+        }
+      ],
+      "towns": [
+        {
+          "rotation": -60,
+          "angle": 30,
+          "percent": 0.57
+        }
+      ],
+      "track": [
+        {
+          "side": 1,
+          "type": "sharp"
+        }
+      ],
+      "color": "yellow/offboard",
+      "quantity": 2
+    },
+    "4d": {
+      "labels": [
+        {
+          "label": "D"
+        }
+      ],
+      "values": [
+        {
+          "value": 20
+        }
+      ],
+      "towns": [{}],
+      "track": [
+        {
+          "side": 1,
+          "type": "straight"
+        }
+      ],
+      "color": "yellow",
+      "quantity": 2
+    },
+    "4dd": {
+      "labels": [
+        {
+          "label": "D"
+        }
+      ],
+      "values": [
+        {
+          "value": 10
+        }
+      ],
+      "towns": [{}],
+      "track": [
+        {
+          "side": 1,
+          "type": "straight"
+        }
+      ],
+      "color": "yellow/offboard",
+      "quantity": 2
+    },
+    "57d": {
+      "labels": [
+        {
+          "label": "D"
+        }
+      ],
+      "values": [
+        {
+          "value": 30
+        }
+      ],
+      "cities": [{}],
+      "track": [
+        {
+          "side": 1,
+          "type": "straight"
+        }
+      ],
+      "color": "yellow",
+      "quantity": 2
+    },
+    "57dd": {
+      "labels": [
+        {
+          "label": "D"
+        }
+      ],
+      "values": [
+        {
+          "value": 20
+        }
+      ],
+      "cities": [{}],
+      "track": [
+        {
+          "side": 1,
+          "type": "straight"
+        }
+      ],
+      "color": "yellow/offboard",
+      "quantity": 2
+    },
+    "58d": {
+      "labels": [
+        {
+          "label": "D"
+        }
+      ],
+      "values": [
+        {
+          "value": 20
+        }
+      ],
+      "towns": [
+        {
+          "rotation": -30,
+          "angle": 60,
+          "percent": 0.26
+        }
+      ],
+      "track": [
+        {
+          "side": 1,
+          "type": "gentle"
+        }
+      ],
+      "color": "yellow",
+      "quantity": 2
+    },
+    "58dd": {
+      "labels": [
+        {
+          "label": "D"
+        }
+      ],
+      "values": [
+        {
+          "value": 10
+        }
+      ],
+      "towns": [
+        {
+          "rotation": -30,
+          "angle": 60,
+          "percent": 0.26
+        }
+      ],
+      "track": [
+        {
+          "side": 1,
+          "type": "gentle"
+        }
+      ],
+      "color": "yellow/offboard",
+      "quantity": 2
+    },
+    "126d1": {
+      "color": "brown",
+      "labels": [
+        {
+          "percent": 0.9,
+          "angle": 210,
+          "label": "K"
+        }
+      ],
+      "values": [
+        {
+          "value": 40,
+          "angle": 90,
+          "percent": 0.9
+        }
+      ],
+      "cities": [
+        {
+          "size": 3,
+          "name": {
+            "name": "København"
+          },
+          "companies": [
+            {
+              "label": "SJS"
+            }
+          ]
+        }
+      ],
+      "track": [
+        {
+          "side": 1
+        },
+        {
+          "side": 2
+        },
+        {
+          "side": 3
+        },
+        {
+          "side": 5
+        },
+        {
+          "side": 6,
+          "gauge": "narrow",
+          "color": "water"
+        }
+      ]
+    },
+    "126d2": {
+      "color": "brown",
+      "labels": [
+        {
+          "percent": 0.9,
+          "angle": 210,
+          "label": "K"
+        }
+      ],
+      "values": [
+        {
+          "value": 40,
+          "angle": 90,
+          "percent": 0.9
+        }
+      ],
+      "cities": [
+        {
+          "size": 3,
+          "name": {
+            "name": "København"
+          },
+          "companies": [
+            {
+              "label": "SJS"
+            }
+          ]
+        }
+      ],
+      "track": [
+        {
+          "side": 1
+        },
+        {
+          "side": 2
+        },
+        {
+          "side": 3
+        },
+        {
+          "side": 4
+        },
+        {
+          "side": 6,
+          "gauge": "narrow",
+          "color": "water"
+        }
+      ]
+    }
   },
   "map": {
+    "roundTracker": {
+      "type": "row",
+      "x": 1000,
+      "y": 200
+    },
+    "players": {
+      "x": 950,
+      "y": 300
+    },
     "hexes": [
       {
         "color": "offboard",
         "offBoardRevenue": {
           "name": {
-            "name": "Norge"
+            "name": "Kristiansand"
           },
           "revenues": [
             {
@@ -775,9 +928,7 @@
             }
           ]
         },
-        "hexes": [
-          "C1"
-        ],
+        "hexes": ["C1"],
         "track": [
           {
             "side": 6,
@@ -789,7 +940,7 @@
         "color": "offboard",
         "offBoardRevenue": {
           "name": {
-            "name": "England"
+            "name": "London"
           },
           "revenues": [
             {
@@ -810,9 +961,7 @@
             }
           ]
         },
-        "hexes": [
-          "A15"
-        ],
+        "hexes": ["A15"],
         "track": [
           {
             "side": 4,
@@ -832,7 +981,7 @@
         "color": "offboard",
         "offBoardRevenue": {
           "name": {
-            "name": "Preussen"
+            "name": "Berlin"
           },
           "revenues": [
             {
@@ -853,9 +1002,7 @@
             }
           ]
         },
-        "hexes": [
-          "F26"
-        ],
+        "hexes": ["F26"],
         "track": [
           {
             "side": 3,
@@ -871,30 +1018,24 @@
         "color": "offboard",
         "offBoardRevenue": {
           "name": {
-            "name": "Sverige"
+            "name": "Malmö"
           },
           "revenues": [
             {
               "color": "yellow",
-              "cost": 40
+              "cost": 20
             },
             {
               "color": "green",
-              "cost": 60
+              "cost": 40
             },
             {
               "color": "brown",
-              "cost": "80"
-            },
-            {
-              "color": "gray",
-              "cost": "100"
+              "cost": 60
             }
           ]
         },
-        "hexes": [
-          "J12"
-        ],
+        "hexes": ["J12"],
         "track": [
           {
             "side": 2,
@@ -910,10 +1051,19 @@
         "color": "gray",
         "hexes": [
           "J22",
-          "G23", "I23",
-          "B24", "H24", "J24",
-          "A25", "C25", "G25", "I25",
-          "B26", "D26", "H26", "J26"
+          "G23",
+          "I23",
+          "B24",
+          "H24",
+          "J24",
+          "A25",
+          "C25",
+          "G25",
+          "I25",
+          "B26",
+          "D26",
+          "H26",
+          "J26"
         ]
       },
       {
@@ -924,10 +1074,7 @@
             "cost": 20
           }
         ],
-        "hexes": [
-          "B14",
-          "B22"
-        ]
+        "hexes": ["B14", "B22"]
       },
       {
         "color": "plain",
@@ -949,9 +1096,7 @@
             "cost": 20
           }
         ],
-        "hexes": [
-          "B20"
-        ]
+        "hexes": ["B20"]
       },
       {
         "color": "plain",
@@ -961,16 +1106,14 @@
             "cost": 20
           }
         ],
-        "borders":[
+        "borders": [
           {
             "color": "offboard",
             "dashed": true,
             "side": 4
           }
         ],
-        "hexes": [
-          "B18"
-        ]
+        "hexes": ["B18"]
       },
       {
         "color": "plain",
@@ -996,48 +1139,7 @@
             "side": 6
           }
         ],
-        "hexes": [
-          "B14"
-        ]
-      },
-      {
-        "color": "offboard",
-        "offBoardRevenue": {
-          "name": {
-            "name": "Kristiansand"
-          },
-          "revenues": [
-            {
-              "color": "yellow",
-              "cost": 20
-            },
-            {
-              "color": "green",
-              "cost": 30
-            },
-            {
-              "color": "brown",
-              "cost": 40
-            },
-            {
-              "color": "gray",
-              "cost": 50
-            }
-          ]
-        },
-        "hexes": [
-          "C5"
-        ],
-        "track": [
-          {
-            "side": 1,
-            "type": "offboard"
-          },
-          {
-            "side": 6,
-            "type": "offboard"
-          }
-        ]
+        "hexes": ["B14"]
       },
       {
         "color": "plain",
@@ -1056,14 +1158,13 @@
             "dashed": true
           }
         ],
-        "hexes": [
-          "B14"
-        ]
+        "hexes": ["B14"]
       },
       {
         "color": "plain",
         "terrain": [
           {
+            "percent": 0,
             "type": "swamp",
             "cost": 20
           }
@@ -1094,9 +1195,7 @@
             "dashed": true
           }
         ],
-        "hexes": [
-          "B16"
-        ]
+        "hexes": ["B16"]
       },
       {
         "color": "plain",
@@ -1126,9 +1225,7 @@
             "color": "water"
           }
         ],
-        "hexes": [
-          "C15"
-        ]
+        "hexes": ["C15"]
       },
       {
         "color": "plain",
@@ -1143,30 +1240,33 @@
             "color": "water"
           }
         ],
-        "hexes": [
-          "C17"
-        ]
+        "hexes": ["C17"]
       },
       {
         "color": "plain",
         "hexes": [
           "D2",
           "B4",
-          "C5", "E5",
-          "A7", "C7",
+          "E5",
           "B8",
           "E9",
           "B10",
-          "A11", "C11", "I11",
-          "B12", "H12",
-          "A13", "G13",
+          "A11",
+          "C11",
+          "I11",
+          "B12",
+          "H12",
+          "A13",
+          "G13",
           "I15",
           "H18",
-          "C21", "E21",
+          "C21",
+          "E21",
           "F22",
-          "C23", "E23",
-          "D24", "F24"
-
+          "C23",
+          "E23",
+          "D24",
+          "F24"
         ]
       },
       {
@@ -1185,9 +1285,7 @@
             }
           }
         ],
-        "hexes": [
-          "D20"
-        ]
+        "hexes": ["D20"]
       },
       {
         "color": "plain",
@@ -1198,9 +1296,12 @@
             }
           }
         ],
-        "hexes": [
-          "D22"
-        ]
+        "labels": [
+          {
+            "label": "D"
+          }
+        ],
+        "hexes": ["D22"]
       },
       {
         "color": "plain",
@@ -1216,14 +1317,12 @@
             },
             "companies": [
               {
-                "label": "FSJ"
+                "label": "F7J"
               }
             ]
           }
         ],
-        "hexes": [
-          "C19"
-        ]
+        "hexes": ["C19"]
       },
       {
         "color": "plain",
@@ -1236,15 +1335,11 @@
           {
             "name": {
               "name": "Hamborg"
-            }, 
-            "companies": [
-              {"label": "AK"}
-            ]
+            },
+            "companies": [{ "label": "AKE" }]
           }
         ],
-        "hexes": [
-          "E25"
-        ]
+        "hexes": ["E25"]
       },
       {
         "color": "water",
@@ -1252,7 +1347,7 @@
           {
             "percent": 0.6,
             "angle": 75,
-            "value": 20
+            "value": 10
           },
           {
             "percent": 0.6,
@@ -1290,7 +1385,7 @@
             "side": 3,
             "end": 0.25,
             "type": "straight"
-          }, 
+          },
           {
             "start": 0.25,
             "end": 0.75,
@@ -1298,7 +1393,7 @@
             "type": "straight",
             "gauge": "narrow",
             "color": "water"
-          }, 
+          },
           {
             "start": 0.75,
             "side": 3,
@@ -1312,9 +1407,7 @@
             "dashed": true
           }
         ],
-        "hexes": [
-          "D14"
-        ]
+        "hexes": ["D14"]
       },
       {
         "color": "plain",
@@ -1322,12 +1415,15 @@
           {
             "name": {
               "name": "Odense"
-            }
+            },
+            "companies": [
+              {
+                "label": "SFJ"
+              }
+            ]
           }
         ],
-        "hexes": [
-          "E15"
-        ]
+        "hexes": ["E15"]
       },
       {
         "color": "plain",
@@ -1348,27 +1444,18 @@
             "color": "water"
           }
         ],
-        "hexes": [
-          "D16"
-        ]
+        "hexes": ["D16"]
       },
       {
         "color": "plain",
-        "cities": [
+        "centerTowns": [
           {
             "name": {
               "name": "Svendborg"
-            },
-            "companies": [
-              {
-                "label": "SNB"
-              }
-            ]
+            }
           }
         ],
-        "hexes": [
-          "E17"
-        ]
+        "hexes": ["E17"]
       },
       {
         "color": "green",
@@ -1381,7 +1468,6 @@
         ],
         "values": [
           {
-
             "value": 30,
             "angle": 30,
             "percent": 0.667
@@ -1395,7 +1481,7 @@
             },
             "companies": [
               {
-                "label": "DSJ"
+                "label": "SJS"
               }
             ]
           }
@@ -1403,26 +1489,24 @@
         "track": [
           {
             "side": 1
-          }, 
+          },
           {
             "side": 2
-          }, 
+          },
           {
             "side": 3
-          }, 
+          },
           {
             "side": 6,
             "gauge": "narrow",
             "color": "water"
           }
         ],
-        "hexes": [
-          "I13"
-        ]
+        "hexes": ["I13"]
       },
       {
         "color": "water",
-        "track":[
+        "track": [
           {
             "side": 1,
             "type": "gentle",
@@ -1430,13 +1514,11 @@
             "color": "water"
           }
         ],
-        "hexes":[
-          "J14"
-        ]
+        "hexes": ["J14"]
       },
       {
         "color": "water",
-        "track":[
+        "track": [
           {
             "side": 1,
             "type": "straight",
@@ -1444,13 +1526,11 @@
             "color": "water"
           }
         ],
-        "hexes":[
-          "J16"
-        ]
+        "hexes": ["J16"]
       },
       {
         "color": "water",
-        "track":[
+        "track": [
           {
             "side": 4,
             "type": "gentle",
@@ -1458,9 +1538,7 @@
             "color": "water"
           }
         ],
-        "hexes":[
-          "J18"
-        ]
+        "hexes": ["J18"]
       },
       {
         "color": "water",
@@ -1476,16 +1554,14 @@
             }
           }
         ],
-        "track":[
+        "track": [
           {
             "side": 3,
             "gauge": "narrow",
             "color": "water"
           }
         ],
-        "hexes":[
-          "K19"
-        ]
+        "hexes": ["K19"]
       },
       {
         "color": "plain",
@@ -1503,34 +1579,26 @@
             ]
           }
         ],
-        "hexes": [
-          "H16"
-        ]
+        "hexes": ["H16"]
       },
       {
         "color": "plain",
         "centerTowns": [
           {
             "angle": 225,
-            "percent": 0.80,
+            "percent": 0.8,
             "name": {
               "reverse": true,
               "name": "Roskilde"
             }
           }
         ],
-        "hexes": [
-          "H14"
-        ]
+        "hexes": ["H14"]
       },
       {
         "color": "plain",
-        "centerTowns": [
-          
-        ],
-        "hexes": [
-          "G15"
-        ]
+        "centerTowns": [],
+        "hexes": ["G15"]
       },
       {
         "color": "plain",
@@ -1550,9 +1618,7 @@
             "dashed": true
           }
         ],
-        "hexes": [
-          "C13"
-        ]
+        "hexes": ["C13"]
       },
       {
         "color": "plain",
@@ -1565,9 +1631,7 @@
             }
           }
         ],
-        "hexes": [
-          "D12"
-        ]
+        "hexes": ["D12"]
       },
       {
         "color": "plain",
@@ -1580,14 +1644,12 @@
             },
             "companies": [
               {
-                "label": "DDJ"
+                "label": "ØJJ"
               }
             ]
           }
         ],
-        "hexes": [
-          "D10"
-        ]
+        "hexes": ["D10"]
       },
       {
         "color": "plain",
@@ -1600,9 +1662,7 @@
             }
           }
         ],
-        "hexes": [
-          "C9"
-        ]
+        "hexes": ["C9"]
       },
       {
         "color": "plain",
@@ -1615,12 +1675,27 @@
             }
           }
         ],
-        "hexes": [
-          "A9"
-        ]
+        "hexes": ["A9"]
       },
       {
         "color": "plain",
+        "terrain": [
+          {
+            "type": "river",
+            "cost": 20
+          }
+        ],
+        "hexes": ["C5", "A7", "C7"]
+      },
+      {
+        "color": "plain",
+        "terrain": [
+          {
+            "percent": 0,
+            "type": "river",
+            "cost": 20
+          }
+        ],
         "centerTowns": [
           {
             "angle": 180,
@@ -1630,11 +1705,8 @@
             }
           }
         ],
-        "hexes": [
-          "B6"
-        ]
+        "hexes": ["B6"]
       },
-      
       {
         "color": "plain",
         "cities": [
@@ -1644,9 +1716,7 @@
             }
           }
         ],
-        "hexes": [
-          "D8"
-        ]
+        "hexes": ["D8"]
       },
       {
         "color": "plain",
@@ -1659,9 +1729,7 @@
             }
           }
         ],
-        "hexes": [
-          "D4"
-        ]
+        "hexes": ["D4"]
       },
       {
         "color": "plain",
@@ -1675,24 +1743,51 @@
             }
           }
         ],
-        "hexes": [
-          "D6"
-        ]
+        "hexes": ["D6"]
       },
       {
-        "color": "plain",
+        "color": "gray",
         "centerTowns": [
           {
-            "angle": 350,
-            "percent": 0.667,
+            "rotate": -90,
             "name": {
               "name": "Frederikshavn"
             }
           }
         ],
-        "hexes": [
-          "E3"
-        ]
+        "track": [
+          {
+            "side": 4
+          },
+          {
+            "side": 1
+          },
+          {
+            "side": 6,
+            "gauge": "narrow",
+            "color": "water"
+          }
+        ],
+        "hexes": ["E3"]
+      },
+      {
+        "color": "water",
+        "mediumCities": [
+          {
+            "name": {
+              "name": "Læsø"
+            }
+          }
+        ],
+        "values": [{ "value": 20 }],
+        "track": [
+          {
+            "side": 3,
+            "gauge": "narrow",
+            "color": "water"
+          }
+        ],
+        "hexes": ["F4"]
       },
       {
         "color": "plain",
@@ -1705,9 +1800,7 @@
             }
           }
         ],
-        "hexes": [
-          "E1"
-        ]
+        "hexes": ["E1"]
       },
       {
         "color": "water",
@@ -1742,20 +1835,18 @@
             "start": 0.75
           }
         ],
-        "hexes": [
-          "F8"
-        ]
+        "hexes": ["F8"]
       },
       {
         "color": "water",
-        "towns": [
+        "mediumCities": [
           {
-            "rotation": 240,
             "name": {
               "name": "Anholt"
             }
           }
         ],
+        "values": [{ "value": 20 }],
         "track": [
           {
             "side": 2,
@@ -1763,9 +1854,7 @@
             "color": "water"
           }
         ],
-        "hexes": [
-          "G7"
-        ]
+        "hexes": ["G7"]
       },
       {
         "color": "water",
@@ -1828,9 +1917,7 @@
             "type": "gentle"
           }
         ],
-        "hexes": [
-          "F16"
-        ]
+        "hexes": ["F16"]
       },
       {
         "color": "water",
@@ -1870,15 +1957,14 @@
             "type": "straight"
           }
         ],
-        "hexes": [
-          "G19"
-        ]
+        "hexes": ["G19"]
       },
       {
         "color": "water",
         "towns": [
           {
             "rotation": 190,
+            "angle": -5,
             "percent": 0.6,
             "name": {
               "name": "Puttgarden"
@@ -1913,9 +1999,7 @@
             "color": "water"
           }
         ],
-        "hexes": [
-          "F20"
-        ]
+        "hexes": ["F20"]
       }
     ]
   }
