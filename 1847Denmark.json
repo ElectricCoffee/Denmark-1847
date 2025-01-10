@@ -1182,7 +1182,6 @@
           "H18",
           "C21",
           "E21",
-          "F22",
           "C23",
           "E23",
           "D24",
@@ -1243,6 +1242,22 @@
           }
         ],
         "hexes": ["C19"]
+      },
+      {
+        "color": "plain",
+        "labels": [
+          {
+            "label": "D"
+          }
+        ],
+        "cities": [
+          {
+            "name": {
+              "name": "Lybæk"
+            }
+          }
+        ],
+        "hexes": ["F22"]
       },
       {
         "color": "plain",
@@ -1651,6 +1666,13 @@
             }
           }
         ],
+        "icons": [
+          {
+            "percent": 0.6,
+            "angle": 240,
+            "type": "port"
+          }
+        ],
         "track": [
           {
             "side": 4
@@ -1825,10 +1847,17 @@
             }
           }
         ],
+        "values": [
+          {
+            "angle": 150,
+            "percent": 0.7,
+            "value": 10
+          }
+        ],
         "icons": [
           {
             "percent": 0.5,
-            "angle": -30,
+            "angle": 0,
             "type": "port"
           }
         ],
@@ -1860,10 +1889,17 @@
             }
           }
         ],
+        "values": [
+          {
+            "angle": 60,
+            "percent": 0.6,
+            "value": "10"
+          }
+        ],
         "icons": [
           {
-            "percent": 0.5,
-            "angle": 90,
+            "percent": 0.7,
+            "angle": -60,
             "type": "port"
           }
         ],
