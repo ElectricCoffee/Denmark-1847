@@ -11,7 +11,7 @@
     "background": "purple",
     "titleX": 700,
     "titleSize": 80,
-    "currency": "#kr.",
+    "currency": "#rd.",
     "orientation": "horizontal"
   },
   "wip": true,
@@ -41,11 +41,6 @@
       "number": 5,
       "certLimit": 12,
       "capital": 390
-    },
-    {
-      "number": 6,
-      "certLimit": 11,
-      "capital": 390
     }
   ],
   "tokenTypes": {
@@ -70,7 +65,7 @@
       {
         "quantity": 1,
         "label": "President's Certificate",
-        "percent": 40,
+        "percent": 20,
         "shares": 2
       },
       {
@@ -88,10 +83,28 @@
       "color": "red"
     },
     {
+      "name": "Det Sjællandske Jernbaneselskab (DSB)",
+      "minor": false,
+      "abbrev": "SJS",
+      "color": "red",
+      "token": {
+        "bar": true
+      }
+    },
+    {
       "name": "Altona-Kieler Eisenbahn-Gesellschaft",
       "minor": true,
       "abbrev": "AKE",
       "color": "green"
+    },
+    {
+      "name": "Altona-Kieler Eisenbahn (PSB)",
+      "minor": false,
+      "abbrev": "AKE",
+      "color": "green",
+      "token": {
+        "bar": true
+      }
     },
     {
       "name": "Østjydske Jernbane",
@@ -100,10 +113,28 @@
       "color": "yellow"
     },
     {
+      "name": "Østjyske Jernbane (DSB)",
+      "minor": false,
+      "abbrev": "ØJJ",
+      "color": "yellow",
+      "token": {
+        "bar": true
+      }
+    },
+    {
       "name": "Fakse Jernbane",
       "minor": true,
       "abbrev": "FJ",
       "color": "blue"
+    },
+    {
+      "name": "Faxe Jernbane (DSB)",
+      "minor": false,
+      "abbrev": "FJ",
+      "color": "blue",
+      "token": {
+        "bar": true
+      }
     },
     {
       "name": "Sydfyenske Jernbane",
@@ -112,22 +143,28 @@
       "color": "purple"
     },
     {
+      "name": "Sydfynske Jernbane (DSB)",
+      "minor": false,
+      "abbrev": "SFJ",
+      "color": "purple",
+      "token": {
+        "bar": true
+      }
+    },
+    {
       "name": "Frederik VIIs Sydslesvigske Jernbane",
       "minor": true,
       "abbrev": "F7J",
       "color": "orange"
     },
     {
-      "name": "Preußische Staatseisenbahn",
+      "name": "Schleswigsche Eisenbahn (PSB)",
       "minor": false,
-      "abbrev": "PSB",
-      "color": "black"
-    },
-    {
-      "name": "Danske Statsbaner",
-      "minor": false,
-      "abbrev": "DSB",
-      "color": "white"
+      "abbrev": "F7J",
+      "color": "orange",
+      "token": {
+        "bar": true
+      }
     }
   ],
   "trains": [
@@ -212,18 +249,6 @@
       "name": "5",
       "limit": 3,
       "tiles": "brown"
-    },
-    {
-      "minor": true,
-      "name": "6",
-      "limit": 2,
-      "tiles": "brown"
-    },
-    {
-      "minor": true,
-      "name": "D",
-      "limit": 2,
-      "tiles": "gray"
     },
     {
       "name": "2",
@@ -1133,12 +1158,13 @@
         "cities": [
           {
             "size": 1,
+            "percent": 0.6,
             "name": {
               "name": "Esbjerg"
             }
           }
         ],
-        "hexes": ["B14"]
+        "hexes": ["A13"]
       },
       {
         "color": "plain",
@@ -1164,7 +1190,6 @@
         "color": "plain",
         "hexes": [
           "D2",
-          "B4",
           "E5",
           "B8",
           "E9",
@@ -1174,7 +1199,7 @@
           "I11",
           "B12",
           "H12",
-          "A13",
+          "B14",
           "G13",
           "C15",
           "I15",
