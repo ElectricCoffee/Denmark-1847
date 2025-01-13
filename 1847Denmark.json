@@ -169,48 +169,88 @@
   ],
   "trains": [
     {
-      "name": "2",
-      "quantity": 12,
+      "name": "2T",
+      "quantity": 6,
       "price": 70,
       "color": "yellow",
-      "rust": "4"
+      "rust": "4T"
     },
     {
-      "name": "3",
+      "name": "2F",
       "quantity": 6,
+      "price": 70,
+      "color": "yellow",
+      "rust": "4T"
+    },
+    {
+      "name": "3T",
+      "quantity": 5,
       "price": 140,
       "color": "green",
-      "rust": "6"
+      "rust": "6T"
     },
     {
-      "name": "4",
+      "name": "3F",
+      "quantity": 5,
+      "price": 140,
+      "color": "green",
+      "rust": "6T"
+    },
+    {
+      "name": "4T",
       "quantity": 3,
       "price": 250,
       "color": "green",
-      "rust": "D"
+      "rust": "10T"
     },
     {
-      "name": "4*",
+      "name": "4T*",
       "quantity": 1,
       "price": 250,
       "color": "green",
-      "rust": "D",
-      "description": "2nd Schleswig War breaks out. Replace all D tiles with their striped counterparts. Crossing the border now costs 10×T, where T is the train level. DSB and PSB are now available."
+      "rust": "10T",
+      "description": "2nd Schleswig War breaks out. Replace all D tiles with their striped counterparts. Crossing the border now costs 10×T, where T is the train level. F7J and AKE nationalise."
     },
     {
-      "name": "5",
+      "name": "4F",
+      "quantity": 4,
+      "price": 250,
+      "color": "green",
+      "rust": "10T"
+    },
+    {
+      "name": "5T",
+      "quantity": 2,
+      "price": 500,
+      "color": "brown"
+    },
+    {
+      "name": "5T*",
+      "quantity": 1,
+      "price": 500,
+      "color": "brown",
+      "description": "Government wants to nationalise the railway. DSB is founded. Remaining companies can nationalise."
+    },
+    {
+      "name": "5F",
       "quantity": 3,
       "price": 500,
       "color": "brown"
     },
     {
-      "name": "6",
+      "name": "6T",
       "quantity": 2,
       "price": 750,
       "color": "brown"
     },
     {
-      "name": "D",
+      "name": "6F",
+      "quantity": 2,
+      "price": 750,
+      "color": "brown"
+    },
+    {
+      "name": "10T",
       "quantity": "∞",
       "print": 9,
       "price": 1000,
@@ -228,57 +268,118 @@
   "phases": [
     {
       "minor": true,
-      "name": "2",
+      "name": "2T",
       "limit": 4,
       "tiles": "yellow"
     },
     {
       "minor": true,
-      "name": "3",
-      "limit": 4,
-      "tiles": "green"
-    },
-    {
-      "minor": true,
-      "name": "4",
-      "limit": 3,
-      "tiles": "green"
-    },
-    {
-      "minor": true,
-      "name": "5",
-      "limit": 3,
-      "tiles": "brown"
-    },
-    {
-      "name": "2",
+      "name": "2F",
       "limit": 4,
       "tiles": "yellow"
     },
     {
-      "name": "3",
+      "minor": true,
+      "name": "3T",
       "limit": 4,
       "tiles": "green"
     },
     {
-      "name": "4",
+      "minor": true,
+      "name": "3F",
+      "limit": 4,
+      "tiles": "green"
+    },
+    {
+      "minor": true,
+      "name": "4T",
       "limit": 3,
       "tiles": "green"
     },
     {
-      "name": "5",
+      "minor": true,
+      "name": "4T*",
+      "limit": 3,
+      "tiles": "green"
+    },
+    {
+      "minor": true,
+      "name": "4F",
+      "limit": 3,
+      "tiles": "green"
+    },
+    {
+      "minor": true,
+      "name": "5T",
       "limit": 3,
       "tiles": "brown"
     },
     {
-      "name": "6",
+      "minor": true,
+      "name": "5T*",
+      "limit": 3,
+      "tiles": "brown"
+    },
+    {
+      "minor": true,
+      "name": "5F",
+      "limit": 3,
+      "tiles": "brown"
+    },
+    {
+      "name": "3T",
+      "limit": 4,
+      "tiles": "green"
+    },
+    {
+      "name": "3F",
+      "limit": 4,
+      "tiles": "green"
+    },
+    {
+      "name": "4T",
+      "limit": 4,
+      "tiles": "green"
+    },
+    {
+      "name": "4T*",
+      "limit": 4,
+      "tiles": "green"
+    },
+    {
+      "name": "4F",
+      "limit": 3,
+      "tiles": "green"
+    },
+    {
+      "name": "5T",
+      "limit": 3,
+      "tiles": "brown"
+    },
+    {
+      "name": "5T*",
+      "limit": 3,
+      "tiles": "brown"
+    },
+    {
+      "name": "5F",
+      "limit": 3,
+      "tiles": "brown"
+    },
+    {
+      "name": "6T",
       "limit": 2,
       "tiles": "brown"
     },
     {
-      "name": "D",
+      "name": "6F",
       "limit": 2,
-      "tiles": "gray"
+      "tiles": "brown"
+    },
+    {
+      "name": "10T",
+      "limit": 2,
+      "tiles": "brown"
     }
   ],
   "pools": [
@@ -323,7 +424,11 @@
   "turns": [
     {
       "name": "Stock Round",
-      "steps": ["Buy one certificate", "Sell any number of certificates"],
+      "steps": [
+        "Auction one Minor Company",
+        "Buy one certificate",
+        "Sell any number of certificates"
+      ],
       "ordered": false
     },
     {
@@ -919,7 +1024,7 @@
   },
   "map": {
     "roundTracker": {
-      "type": "row",
+      "type": "",
       "x": 1000,
       "y": 200
     },
