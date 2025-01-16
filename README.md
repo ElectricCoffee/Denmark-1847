@@ -1,4 +1,4 @@
-# Denmark 1847
+![Logo](/Denmark%201847%20logo.png)
 
 An 18XX-style game taking place during 1800s Denmark, starting at the "first" official railway opening in 1847 and ending in the privatisation of the railway in 1880.
 
@@ -17,6 +17,7 @@ Nothing you see right now is final and everything is subject to change.
 - Tolls
 - Changing Landscapes
 - Privatisation
+- Incremental Capitalisation
 
 # Assembly Instructions
 
