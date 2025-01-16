@@ -77,21 +77,6 @@
   },
   "companies": [
     {
-      "name": "Det Sjællandske Jernbaneselskab",
-      "minor": true,
-      "abbrev": "SJS",
-      "color": "red"
-    },
-    {
-      "name": "Det Sjællandske Jernbaneselskab (DSB)",
-      "minor": false,
-      "abbrev": "SJS",
-      "color": "red",
-      "token": {
-        "bar": true
-      }
-    },
-    {
       "name": "Altona-Kieler Eisenbahn-Gesellschaft",
       "minor": true,
       "abbrev": "AKE",
@@ -102,6 +87,36 @@
       "minor": false,
       "abbrev": "AKE",
       "color": "green",
+      "token": {
+        "bar": true
+      }
+    },
+    {
+      "name": "Frederik VIIs Sydslesvigske Jernbane",
+      "minor": true,
+      "abbrev": "F7J",
+      "color": "orange"
+    },
+    {
+      "name": "Schleswigsche Eisenbahn (PSB)",
+      "minor": false,
+      "abbrev": "F7J",
+      "color": "orange",
+      "token": {
+        "bar": true
+      }
+    },
+    {
+      "name": "Det Sjællandske Jernbaneselskab",
+      "minor": true,
+      "abbrev": "SJS",
+      "color": "red"
+    },
+    {
+      "name": "Det Sjællandske Jernbaneselskab (DSB)",
+      "minor": false,
+      "abbrev": "SJS",
+      "color": "red",
       "token": {
         "bar": true
       }
@@ -150,33 +165,11 @@
       "token": {
         "bar": true
       }
-    },
-    {
-      "name": "Frederik VIIs Sydslesvigske Jernbane",
-      "minor": true,
-      "abbrev": "F7J",
-      "color": "orange"
-    },
-    {
-      "name": "Schleswigsche Eisenbahn (PSB)",
-      "minor": false,
-      "abbrev": "F7J",
-      "color": "orange",
-      "token": {
-        "bar": true
-      }
     }
   ],
   "trains": [
     {
       "name": "2T",
-      "quantity": 6,
-      "price": 70,
-      "color": "yellow",
-      "rust": "4T"
-    },
-    {
-      "name": "2F",
       "quantity": 6,
       "price": 70,
       "color": "yellow",
@@ -193,8 +186,8 @@
       "name": "3F",
       "quantity": 5,
       "price": 140,
-      "color": "green",
-      "rust": "6T"
+      "color": "yellow",
+      "rust": "4T"
     },
     {
       "name": "4T",
@@ -216,7 +209,7 @@
       "quantity": 4,
       "price": 250,
       "color": "green",
-      "rust": "10T"
+      "rust": "6T"
     },
     {
       "name": "5T",
@@ -254,7 +247,7 @@
       "quantity": "∞",
       "print": 9,
       "price": 1000,
-      "color": "brown",
+      "color": "grey",
       "description": "Cost 800 when trading in a 4T, 5T or 6T",
       "available": "6",
       "discount": {
@@ -274,12 +267,6 @@
     },
     {
       "minor": true,
-      "name": "2F",
-      "limit": 4,
-      "tiles": "yellow"
-    },
-    {
-      "minor": true,
       "name": "3T",
       "limit": 4,
       "tiles": "green"
@@ -288,7 +275,7 @@
       "minor": true,
       "name": "3F",
       "limit": 4,
-      "tiles": "green"
+      "tiles": "yellow"
     },
     {
       "minor": true,
@@ -328,11 +315,6 @@
     },
     {
       "name": "3T",
-      "limit": 4,
-      "tiles": "green"
-    },
-    {
-      "name": "3F",
       "limit": 4,
       "tiles": "green"
     },
@@ -379,7 +361,7 @@
     {
       "name": "10T",
       "limit": 2,
-      "tiles": "brown"
+      "tiles": "grey"
     }
   ],
   "pools": [
