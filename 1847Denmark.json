@@ -137,15 +137,15 @@
       }
     },
     {
-      "name": "Fakse Jernbane",
+      "name": "Lolland-Falsterske Jernbane",
       "minor": true,
-      "abbrev": "FJ",
+      "abbrev": "LFJ",
       "color": "blue"
     },
     {
-      "name": "Faxe Jernbane (DSB)",
+      "name": "Lolland-Falsterske Jernbane (DSB)",
       "minor": false,
-      "abbrev": "FJ",
+      "abbrev": "LFJ",
       "color": "blue",
       "token": {
         "bar": true
@@ -1595,18 +1595,13 @@
       },
       {
         "color": "plain",
-        "cities": [
+        "centerTowns": [
           {
             "angle": 270,
             "percent": 0.667,
             "name": {
               "name": "Faxe"
-            },
-            "companies": [
-              {
-                "label": "FJ"
-              }
-            ]
+            }
           }
         ],
         "hexes": ["H16"]
@@ -1951,25 +1946,25 @@
       },
       {
         "color": "water",
-        "towns": [
+        "cities": [
           {
-            "rotation": 240,
             "name": {
-              "name": "Rødbyhavn"
-            }
+              "name": "Rødby"
+            },
+            "companies": [{ "label": "LFJ" }]
           }
         ],
         "values": [
           {
             "angle": 150,
             "percent": 0.7,
-            "value": 10
+            "value": 20
           }
         ],
         "icons": [
           {
-            "percent": 0.5,
-            "angle": 0,
+            "percent": 0.7,
+            "angle": -30,
             "type": "port"
           }
         ],
