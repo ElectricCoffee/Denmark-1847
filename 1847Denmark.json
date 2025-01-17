@@ -152,13 +152,13 @@
       }
     },
     {
-      "name": "Sydfyenske Jernbane",
+      "name": "Sydfyenske Jernbaner",
       "minor": true,
       "abbrev": "SFJ",
       "color": "purple"
     },
     {
-      "name": "Sydfynske Jernbane (DSB)",
+      "name": "Sydfynske Jernbaner (DSB)",
       "minor": false,
       "abbrev": "SFJ",
       "color": "purple",
