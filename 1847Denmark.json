@@ -1742,6 +1742,13 @@
       },
       {
         "color": "plain",
+        "terrain": [
+          {
+            "percent": 0,
+            "type": "river",
+            "cost": 20
+          }
+        ],
         "centerTowns": [
           {
             "angle": 0,
