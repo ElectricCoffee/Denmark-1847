@@ -1791,6 +1791,13 @@
             "type": "port"
           }
         ],
+        "values": [
+          {
+            "angle": 90,
+            "percent": 0.667,
+            "value": 10
+          }
+        ],
         "track": [
           {
             "side": 4
